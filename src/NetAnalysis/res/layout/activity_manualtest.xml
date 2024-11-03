@@ -1,0 +1,79 @@
+	
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.zte.netanalysis.ManualTestActivity">
+  	
+    <RelativeLayout
+        android:id="@+id/control_area"
+        android:layout_width="match_parent"
+    	android:layout_height="60dp"
+    	android:layout_alignParentBottom="true"
+    	android:background="#BEBEBE">
+    	
+		<Button
+	        android:id="@+id/ctrlbutton"
+	        android:layout_width="wrap_content"
+		    android:layout_height="match_parent"
+		    android:text="@string/startButton"
+		    android:textSize="18sp"
+		    android:layout_centerInParent="true" />
+        
+    </RelativeLayout>
+    
+    <com.zte.netanalysis.TcpSpeedChartView
+        android:id="@+id/chart"
+        android:layout_width="fill_parent"
+        android:layout_height="250dp" 
+        android:layout_marginTop="10dp" 
+        android:layout_alignParentTop="true"/>
+    
+    <ScrollView 
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/chart"
+        android:layout_above="@id/control_area">
+		
+         <LinearLayout 
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:orientation="vertical">
+             
+             <TextView
+		        android:id = "@+id/generalInfo"
+		        android:layout_width="fill_parent"
+		        android:layout_height="wrap_content"
+		        android:textSize="15sp"		        
+		        android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:paddingTop="10dp"/>
+		   
+		     <TextView
+		        android:id = "@+id/dnsSumInfo"
+		        android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:textSize="15sp"
+				android:layout_marginTop="8dp"
+				android:background="#D3D3D3"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:paddingTop="10dp"/>
+		   
+		     <TextView
+		        android:id = "@+id/tcpSumInfo"
+		        android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:textSize="15sp"
+				android:layout_marginTop="8dp"
+				android:background="#D3D3D3"
+				android:paddingStart="20dp"
+				android:paddingEnd="20dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="8dp"/>
+    	</LinearLayout>
+    	
+    </ScrollView>
+
+</RelativeLayout>

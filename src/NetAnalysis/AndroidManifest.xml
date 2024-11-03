@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.zte.netanalysis"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="22" />
+    
+	<uses-permission
+        android:name="android.permission.INTERNET" />
+	<uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission
+        android:name="android.permission.ACCESS_SUPERUSER" />
+        
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ManualTestActivity"
+            android:label="Manual Test" >            
+        </activity>
+        <activity
+            android:name=".AutoTestActivity"
+            android:label="Auto Test">
+        </activity>
+        <activity
+            android:name=".CapInfoActivity"
+            android:label="Capture Info" >            
+        </activity>
+        <activity
+            android:name=".DnsInfoActivity"
+            android:label="Name Queries" >
+        </activity>
+        <activity
+            android:name=".TcpInfoActivity"
+            android:label="@string/tcpinfoactivity_title" >
+        </activity>
+        <activity
+            android:name=".TcpSpeedChartActivity"
+            android:label="@string/tcpspeedchartactivity_title" >
+        </activity>
+        <activity
+            android:name=".SettingsActivity"
+            android:label="@string/settingsactivity_title">
+        </activity>
+        <activity
+            android:name=".HistoryRecordActivity"
+            android:label="History Records"
+            android:uiOptions="splitActionBarWhenNarrow">           
+        </activity>
+        <service
+            android:name=".NetCapService">
+        </service>       
+    </application>
+
+</manifest>

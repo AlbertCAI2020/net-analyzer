@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="tcpstatinterval">
+        <item>50ms</item>
+        <item>100ms</item>
+        <item>200ms</item>
+        <item>500ms</item>
+        <item>1000ms</item>
+    </string-array>
+    <string-array name="tcpstatinterval_value">
+        <item>50</item>
+        <item>100</item>
+        <item>200</item>
+        <item>500</item>
+        <item>1000</item>
+    </string-array>
+    
+</resources>

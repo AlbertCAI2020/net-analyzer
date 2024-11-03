@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <PreferenceCategory android:title="Common">
+         <CheckBoxPreference 
+            android:title="Save pcap file"
+            android:summaryOn="path: /sdcard/NetAnalysis/pcap/"
+            android:defaultValue="false"
+            android:disableDependentsState="false"
+            android:key="savingPcapFile"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Manual test">
+         <ListPreference 
+            android:title="Data collection interval(TCP)"
+            android:summary="Collect Tcp data every interval(ms)"
+            android:entries="@array/tcpstatinterval"
+            android:entryValues="@array/tcpstatinterval_value"
+            android:defaultValue="1000"
+            android:key="tcpStatInterval"/>
+    </PreferenceCategory>
+    
+    <PreferenceCategory android:title="Auto test">
+          <CheckBoxPreference 
+            android:title="Save downloaded file"
+            android:summaryOn="path: /sdcard/NetAnalysis/download/"
+            android:defaultValue="false"
+            android:disableDependentsState="false"
+            android:key="savingDownload"/>
+    </PreferenceCategory>
+
+</PreferenceScreen>

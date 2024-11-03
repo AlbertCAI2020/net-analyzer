@@ -1,0 +1,2 @@
+alias ls='busybox ls --color=never'
+adb pull /sdcard/netcap.log .\

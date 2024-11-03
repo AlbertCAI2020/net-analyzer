@@ -1,0 +1,19 @@
+[2016/03/23 13:36:55]server initializing...
+[2016/03/23 13:36:55]trying open read-pipe:/data/data/com.zte.netanalysis/files/c2s
+[2016/03/23 13:36:56]read-pipe open success!
+[2016/03/23 13:36:56]trying open write-pipe:/data/data/com.zte.netanalysis/files/s2c
+[2016/03/23 13:36:56]write-pipe open success!
+[2016/03/23 13:36:56]device:rmnet_data0
+[2016/03/23 13:36:56]ip:0xae95c07(10.233.92.7), mask:0xfffffff0(255.255.255.240)
+[2016/03/23 13:36:56]data-link:113, LINUX_SLL, Linux cooked
+[2016/03/23 13:36:56]packet capturer init success!
+[2016/03/23 13:36:56]server initialize success!
+[2016/03/23 13:36:56]server running...
+[2016/03/23 13:37:38]StartCapReq received!
+[2016/03/23 13:37:38]TCP data collecting interval: 1000 ms
+[2016/03/23 13:37:38]PacketAnalyzer start success!
+[2016/03/23 13:37:38]StartCapRes send success!
+[2016/03/23 13:37:43]StopCapReq received!
+[2016/03/23 13:37:43]StopCapRes send success!
+[2016/03/23 13:37:53]pipe read error:0!
+[2016/03/23 13:37:53]server stopped!

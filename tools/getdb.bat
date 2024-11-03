@@ -1,0 +1,1 @@
+adb pull /sdcard/capinfo.db  ./capinfo.db

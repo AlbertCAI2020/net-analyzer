@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">NetAnalysis</string>
+    <string name="action_settings">Settings</string>
+    <string name="startButton">Start Capture</string>
+    <string name="stopButton">Stop Capture</string>
+    <string name="url">URL</string>
+    <string name = "tcpinfoactivity_title">TCP Connections</string>
+	<string name = "settingsactivity_title">Settings</string>
+	<string name = "tcpspeedchartactivity_title">Speed Chart</string>
+	<string name = "manualtestButton">Manual Test</string>
+	<string name = "autotestButton">Auto Test</string>
+	<string name = "settingButton">Settings</string>
+	<string name = "historyrecordButton">History Records</string>
+	
+</resources>

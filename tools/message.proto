@@ -1,0 +1,106 @@
+
+package com.zte.netanalysis.capcontrol;
+
+option optimize_for = LITE_RUNTIME;
+
+enum MsgType{
+	START_CAP_REQ = 1;
+	START_CAP_RES = 2;
+	STOP_CAP_REQ  = 3;
+	STOP_CAP_RES  = 4;
+	IP_STAT_NOTIFY = 5;
+	TCP_STAT_NOTIFY = 6;
+	TCP_SES_NOTIFY = 7;
+	DNS_TRANS_NOTIFY = 8;
+}
+
+message StartCapReq{
+	required int32 seq = 1;
+	optional string url = 2;
+	optional string saveFile = 3;
+	optional uint32 tcpStatInterval = 4;
+}
+
+message StartCapRes{
+	required int32 seq = 1;
+	required int32 ack = 2;
+	required uint64 time = 3;
+}
+
+message StopCapReq{
+	required int32 seq = 1;
+}
+
+message StopCapRes{
+	required int32 seq = 1;
+	required uint64 time = 2;
+	optional uint32 totalSecs = 3;
+	optional uint32 totalPktNum = 4;
+	optional uint32 droppedPktNum = 5;	
+}
+message IpStatNotify{
+	required uint64 startTime = 1;
+	required uint64 endTime = 2;
+	optional uint32 pktNum = 3;
+	optional uint32 bytes = 4;
+}
+
+message TcpStatNotify{
+	required uint64 startTime = 1;
+	required uint64 endTime = 2;
+	required uint32 sessionId = 3;
+	
+	message DirStat{
+		optional uint32 pktNum = 1;
+		optional uint32 bytes = 2;
+		optional uint32 retransNum = 3;
+		optional uint32 retransBytes = 4;
+		optional uint32 retransAckedNum = 5;
+		optional uint32 retransAckedBytes = 6;
+	}
+	
+	optional DirStat dlStat = 4;
+	optional DirStat ulStat = 5;
+}
+message TcpSessionNotify{
+	required uint32 sessionId = 1;
+	
+	optional group IpPort = 2 {
+		required string localIP = 1;
+		required string remoteIP = 2;
+		required uint32 localPort = 3;
+		required uint32 remotePort = 4;
+	}
+	optional uint32 rtt = 3;
+	
+	message FlowInfo{
+		optional uint64 beginTime = 1;
+		optional uint64 endTime = 2;
+		optional uint64 firstPayloadTime = 3;
+		optional uint64 lastPayloadTime = 4;
+		
+		optional uint32 totalPktNum = 5;
+		optional uint32 totalBytes = 6;
+		optional uint32 retransPktNum = 7;
+		optional uint32 retransBytes = 8;
+		optional uint32 retransAckedNum = 9;
+		optional uint32 retransAckedBytes = 10;
+		optional uint32 fastRetransNum = 11;
+		optional uint32 fastRetransBytes = 12;
+		optional uint32 disorderPktNum = 13;
+		optional uint32 disorderBytes = 14;
+		
+		optional uint32 dupAckNum = 15;
+	}
+	optional FlowInfo dlInfo = 4;
+	optional FlowInfo ulInfo = 5;
+}
+
+message DnsTransNotify{
+	optional uint32 retryCount = 1;
+	optional uint64 queryTime = 2;
+	optional uint64 answerTime = 3;
+	optional string dnsServerIp = 4;
+	optional string hostName = 5;
+	optional string ipAddr = 6;	
+}

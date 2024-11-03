@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" 
+    android:orientation="vertical">    
+    
+    <RelativeLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="40dp"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true">
+    	
+    	<TextView
+    	    android:id="@+id/urlText"
+    	    android:layout_width="wrap_content"
+	    	android:layout_height="match_parent"
+	    	android:layout_alignParentStart="true"
+	    	android:layout_alignParentLeft="true"
+	    	android:text="@string/url"
+    	    android:textSize="18sp"
+    	    android:gravity="bottom"/>
+    	
+    	<EditText
+    	    android:id="@+id/urlEdit"
+    	    android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:layout_toEndOf="@id/urlText"
+	    	android:layout_toRightOf="@id/urlText"
+	    	android:layout_alignBottom="@id/urlText"
+	    	android:textSize="18sp"
+	    	android:text="ftp://"
+	    	android:gravity="bottom" 	    	
+	    	android:inputType="text" />
+    	
+    </RelativeLayout>  
+    
+    <RelativeLayout 
+        android:layout_width="fill_parent"
+    	android:layout_height="40dp"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true">
+    	
+        <TextView
+    	    android:id="@+id/maxTimeText"    	    
+    	    android:layout_width="wrap_content"
+	    	android:layout_height="match_parent"
+	    	android:layout_alignParentStart="true"
+	    	android:layout_alignParentLeft="true"	    	
+	    	android:text="Time Out(sec)"
+    	    android:textSize="18sp"
+    	    android:gravity="bottom"/>
+    	
+    	<EditText
+    	    android:id="@+id/maxTimeEdit"
+    	    android:layout_width="60dp"
+	    	android:layout_height="match_parent"
+	    	android:layout_toEndOf="@id/maxTimeText"
+	    	android:layout_toRightOf="@id/maxTimeText"
+	    	android:layout_alignBottom="@id/maxTimeText"
+	    	android:textSize="18sp"
+	    	android:text="10"
+	    	android:gravity="bottom"
+	    	android:inputType="number" />
+    	
+    	<TextView
+    	    android:id="@+id/repeatText"
+    	    android:layout_width="wrap_content"
+	    	android:layout_height="match_parent"
+	    	android:layout_toEndOf="@id/maxTimeEdit"
+	    	android:layout_toRightOf="@id/maxTimeEdit"
+	    	android:layout_alignBottom="@id/maxTimeText"
+	    	android:layout_marginStart="10dp"
+	    	android:layout_marginLeft="10dp"
+	    	android:text="Repeat"
+    	    android:textSize="18sp"
+    	    android:gravity="bottom"/>
+    	
+    	<EditText
+    	    android:id="@+id/repeatEdit"
+    	    android:layout_width="60dp"
+	    	android:layout_height="match_parent"
+	    	android:layout_toEndOf="@id/repeatText"
+	    	android:layout_toRightOf="@id/repeatText"
+	    	android:layout_alignBottom="@id/maxTimeText"
+	    	android:textSize="18sp"
+	    	android:text="1"
+	    	android:gravity="bottom"
+	    	android:inputType="number" />
+    </RelativeLayout>
+    
+    
+    <RelativeLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="40dp"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true">
+    	
+    	<TextView
+    	    android:id="@+id/usrNameText"
+    	    android:layout_width="wrap_content"
+	    	android:layout_height="match_parent"
+	    	android:layout_alignParentStart="true"
+	    	android:layout_alignParentLeft="true"
+	    	android:text="User Name"
+    	    android:textSize="18sp"
+    	    android:gravity="bottom"/>
+    	
+    	<EditText
+    	    android:id="@+id/usrNameEdit"
+    	    android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:layout_toEndOf="@id/usrNameText"
+	    	android:layout_toRightOf="@id/usrNameText"
+	    	android:layout_alignBottom="@id/usrNameText"
+	    	android:textSize="18sp"
+	    	android:gravity="bottom" 	    	
+	    	android:inputType="text" />
+    	
+    </RelativeLayout> 
+    
+    <RelativeLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="40dp"
+    	android:focusable="true"
+    	android:focusableInTouchMode="true">
+    	
+    	<TextView
+    	    android:id="@+id/passwordText"
+    	    android:layout_width="wrap_content"
+	    	android:layout_height="match_parent"
+	    	android:layout_alignParentStart="true"
+	    	android:layout_alignParentLeft="true"
+	    	android:text="Password"
+    	    android:textSize="18sp"
+    	    android:gravity="bottom"/>
+    	
+    	<EditText
+    	    android:id="@+id/passwordEdit"
+    	    android:layout_width="match_parent"
+	    	android:layout_height="match_parent"
+	    	android:layout_toEndOf="@id/passwordText"
+	    	android:layout_toRightOf="@id/passwordText"
+	    	android:layout_alignBottom="@id/passwordText"
+	    	android:textSize="18sp"
+	    	android:gravity="bottom" 	    	
+	    	android:inputType="text" />
+    	
+    </RelativeLayout>  
+    
+
+</LinearLayout>
